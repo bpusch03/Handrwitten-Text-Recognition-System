@@ -1,0 +1,20 @@
+Config:
+	Topography
+		-Conv2D layer --> (kernel_size=(3,3), activation= 'relu', # of filters = 32)
+		-MaxPooling2D layer --> (pool_size=(2, 2)
+		-Dropout layer --> Dropout rate = .3
+		-Conv2D layer --> (kernel_size=(3,3), activation= 'relu', # of filters = 64)
+		-MaxPooling2D layer --> (pool_size=(2, 2)
+		-Dropout layer --> Dropout rate = .3
+		-Flatten layer
+		-Dense layer (256 nodes, activation= 'relu'	)
+		-Output layer (dense, 47 nodes, activation= 'softmax')
+	Learning rate = 0.003
+	Epochs = 15
+	batch size = 500
+	validation split = .2
+	
+Results:
+	-Training Set accuracy --> 90.41
+	-Validation Set Accuracy --> 87.95
+	-Test Set Accuracy --> 88.09

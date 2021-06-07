@@ -1,0 +1,23 @@
+This model was trained on the emnist letters dataset instead of the emnist balanced dataset
+
+Config:
+	Topography
+		-Conv2D layer --> (kernel_size=(3,3), activation= 'relu', # of filters = 16)
+		-MaxPooling2D layer --> (pool_size=(2, 2)
+		-Dropout layer --> Dropout rate = .3
+		-Conv2D layer --> (kernel_size=(3,3), activation= 'relu', # of filters = 32)
+		-MaxPooling2D layer --> (pool_size=(2, 2)
+		-Dropout layer --> Dropout rate = .3
+		-Flatten layer
+		-Dense layer (256 nodes, activation= 'relu'	)
+		-Output layer (dense, 25 nodes, activation= 'softmax')
+	Learning rate = 0.003
+	Epochs = 16
+	batch size = 500
+	validation split = .2
+	
+	
+Results:
+Training set: 94.29%
+Validation Set: 93.81%
+Test set: 93.8%
